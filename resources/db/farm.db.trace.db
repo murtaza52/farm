@@ -1,0 +1,131 @@
+2019-03-13 22:00:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SAIFEE_ACRE" already exists; SQL statement:
+CREATE TABLE saifee_acre (acre_id identity not null auto_increment, tags varchar, worker_id int not null, supervisor_id int) [42101-198]
+2019-03-13 22:00:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SAIFEE_WORKER" already exists; SQL statement:
+CREATE TABLE saifee_worker (worker_id identity not null auto_increment, tags varchar, name varchar not null, lc1_letter image, national_id image, photo image, supervisor_id bigint, comments text) [42101-198]
+2019-03-13 22:00:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SAIFEE_BANANA" already exists; SQL statement:
+CREATE TABLE saifee_banana (plant_id identity not null auto_increment, tags varchar, type varchar, variety varchar, comments text) [42101-198]
+2019-03-13 22:00:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SAIFEE_BANANA_BUNCH" already exists; SQL statement:
+CREATE TABLE saifee_banana_bunch (bunch_id identity not null auto_increment, plant_id bigint not null, tags varchar, flowered timestamp, ready_for_harvest timestamp, harvested timestamp, sale_price int, weight int, hands int, fingers int, comments text, photo image, unaccounted boolean) [42101-198]
+2019-03-13 22:00:55 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Table "SAIFEE_BANANA_BUNCH" already exists; SQL statement:
+CREATE TABLE saifee_banana_bunch (bunch_id identity not null auto_increment, plant_id bigint not null, tags varchar, flowered timestamp, ready_for_harvest timestamp, harvested timestamp, sale_price int, weight int, hands int, fingers int, comments text, photo image, unaccounted boolean) [42101-198]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:792)
+	at clojure.java.jdbc$execute_batch.invokeStatic(jdbc.clj:591)
+	at clojure.java.jdbc$execute_batch.invoke(jdbc.clj:584)
+	at clojure.java.jdbc$db_do_commands$fn__547.invoke(jdbc.clj:940)
+	at clojure.java.jdbc$db_transaction_STAR_.invokeStatic(jdbc.clj:799)
+	at clojure.java.jdbc$db_transaction_STAR_.invoke(jdbc.clj:769)
+	at clojure.java.jdbc$db_transaction_STAR_.invokeStatic(jdbc.clj:782)
+	at clojure.java.jdbc$db_transaction_STAR_.invoke(jdbc.clj:769)
+	at clojure.java.jdbc$db_do_commands.invokeStatic(jdbc.clj:939)
+	at clojure.java.jdbc$db_do_commands.invoke(jdbc.clj:924)
+	at clojure.java.jdbc$db_do_commands.invokeStatic(jdbc.clj:943)
+	at clojure.java.jdbc$db_do_commands.invoke(jdbc.clj:924)
+	at clojure.java.jdbc$db_do_commands.invokeStatic(jdbc.clj:930)
+	at clojure.java.jdbc$db_do_commands.invoke(jdbc.clj:924)
+	at farm.core$create_tables.invokeStatic(core.clj:96)
+	at farm.core$create_tables.invoke(core.clj:94)
+	at farm.core$eval17837.invokeStatic(form-init9137313720771527914.clj:102)
+	at farm.core$eval17837.invoke(form-init9137313720771527914.clj:102)
+	at clojure.lang.Compiler.eval(Compiler.java:7062)
+	at clojure.lang.Compiler.eval(Compiler.java:7025)
+	at clojure.core$eval.invokeStatic(core.clj:3206)
+	at clojure.core$eval.invoke(core.clj:3202)
+	at clojure.main$repl$read_eval_print__8572$fn__8575.invoke(main.clj:243)
+	at clojure.main$repl$read_eval_print__8572.invoke(main.clj:243)
+	at clojure.main$repl$fn__8581.invoke(main.clj:261)
+	at clojure.main$repl.invokeStatic(main.clj:261)
+	at clojure.main$repl.doInvoke(main.clj:177)
+	at clojure.lang.RestFn.applyTo(RestFn.java:137)
+	at clojure.core$apply.invokeStatic(core.clj:657)
+	at clojure.core$apply.invoke(core.clj:652)
+	at refactor_nrepl.ns.slam.hound.regrow$wrap_clojure_repl$fn__12484.doInvoke(regrow.clj:18)
+	at clojure.lang.RestFn.invoke(RestFn.java:1523)
+	at nrepl.middleware.interruptible_eval$evaluate$fn__1593.invoke(interruptible_eval.clj:83)
+	at clojure.lang.AFn.applyToHelper(AFn.java:152)
+	at clojure.lang.AFn.applyTo(AFn.java:144)
+	at clojure.core$apply.invokeStatic(core.clj:657)
+	at clojure.core$with_bindings_STAR_.invokeStatic(core.clj:1965)
+	at clojure.core$with_bindings_STAR_.doInvoke(core.clj:1965)
+	at clojure.lang.RestFn.invoke(RestFn.java:425)
+	at nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:81)
+	at nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:50)
+	at nrepl.middleware.interruptible_eval$interruptible_eval$fn__1636$fn__1639.invoke(interruptible_eval.clj:221)
+	at nrepl.middleware.interruptible_eval$run_next$fn__1631.invoke(interruptible_eval.clj:189)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SAIFEE_BANANA_BUNCH" already exists; SQL statement:
+CREATE TABLE saifee_banana_bunch (bunch_id identity not null auto_increment, plant_id bigint not null, tags varchar, flowered timestamp, ready_for_harvest timestamp, harvested timestamp, sale_price int, weight int, hands int, fingers int, comments text, photo image, unaccounted boolean) [42101-198]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:85)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:133)
+	at org.h2.command.Command.executeUpdate(Command.java:267)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:169)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:777)
+	at clojure.java.jdbc$execute_batch.invokeStatic(jdbc.clj:591)
+	at clojure.java.jdbc$execute_batch.invoke(jdbc.clj:584)
+	at clojure.java.jdbc$db_do_commands$fn__547.invoke(jdbc.clj:940)
+	at clojure.java.jdbc$db_transaction_STAR_.invokeStatic(jdbc.clj:799)
+	at clojure.java.jdbc$db_transaction_STAR_.invoke(jdbc.clj:769)
+	at clojure.java.jdbc$db_transaction_STAR_.invokeStatic(jdbc.clj:782)
+	at clojure.java.jdbc$db_transaction_STAR_.invoke(jdbc.clj:769)
+	at clojure.java.jdbc$db_do_commands.invokeStatic(jdbc.clj:939)
+	at clojure.java.jdbc$db_do_commands.invoke(jdbc.clj:924)
+	at clojure.java.jdbc$db_do_commands.invokeStatic(jdbc.clj:943)
+	at clojure.java.jdbc$db_do_commands.invoke(jdbc.clj:924)
+	at clojure.java.jdbc$db_do_commands.invokeStatic(jdbc.clj:930)
+	at clojure.java.jdbc$db_do_commands.invoke(jdbc.clj:924)
+	at farm.core$create_tables.invokeStatic(core.clj:96)
+	at farm.core$create_tables.invoke(core.clj:94)
+	at farm.core$eval17837.invokeStatic(form-init9137313720771527914.clj:102)
+	at farm.core$eval17837.invoke(form-init9137313720771527914.clj:102)
+	at clojure.lang.Compiler.eval(Compiler.java:7062)
+	at clojure.lang.Compiler.eval(Compiler.java:7025)
+	at clojure.core$eval.invokeStatic(core.clj:3206)
+	at clojure.core$eval.invoke(core.clj:3202)
+	at clojure.main$repl$read_eval_print__8572$fn__8575.invoke(main.clj:243)
+	at clojure.main$repl$read_eval_print__8572.invoke(main.clj:243)
+	at clojure.main$repl$fn__8581.invoke(main.clj:261)
+	at clojure.main$repl.invokeStatic(main.clj:261)
+	at clojure.main$repl.doInvoke(main.clj:177)
+	at clojure.lang.RestFn.applyTo(RestFn.java:137)
+	at clojure.core$apply.invokeStatic(core.clj:657)
+	at clojure.core$apply.invoke(core.clj:652)
+	at refactor_nrepl.ns.slam.hound.regrow$wrap_clojure_repl$fn__12484.doInvoke(regrow.clj:18)
+	at clojure.lang.RestFn.invoke(RestFn.java:1523)
+	at nrepl.middleware.interruptible_eval$evaluate$fn__1593.invoke(interruptible_eval.clj:83)
+	at clojure.lang.AFn.applyToHelper(AFn.java:152)
+	at clojure.lang.AFn.applyTo(AFn.java:144)
+	at clojure.core$apply.invokeStatic(core.clj:657)
+	at clojure.core$with_bindings_STAR_.invokeStatic(core.clj:1965)
+	at clojure.core$with_bindings_STAR_.doInvoke(core.clj:1965)
+	at clojure.lang.RestFn.invoke(RestFn.java:425)
+	at nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:81)
+	at nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:50)
+	at nrepl.middleware.interruptible_eval$interruptible_eval$fn__1636$fn__1639.invoke(interruptible_eval.clj:221)
+	at nrepl.middleware.interruptible_eval$run_next$fn__1631.invoke(interruptible_eval.clj:189)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SAIFEE_BANANA" already exists; SQL statement:
+CREATE TABLE saifee_banana (plant_id identity not null auto_increment, tags varchar, type varchar, variety varchar, comments text) [42101-198]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SAIFEE_WORKER" already exists; SQL statement:
+CREATE TABLE saifee_worker (worker_id identity not null auto_increment, tags varchar, name varchar not null, lc1_letter image, national_id image, photo image, supervisor_id bigint, comments text) [42101-198]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SAIFEE_ACRE" already exists; SQL statement:
+CREATE TABLE saifee_acre (acre_id identity not null auto_increment, tags varchar, worker_id int not null, supervisor_id int) [42101-198]
+2019-03-13 22:24:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BURHANI_ACRE" not found; SQL statement:
+DROP TABLE burhani_acre [42102-198]
+2019-03-13 22:25:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SAIFEE_ACRE[*] "; expected "SET, SAVEPOINT, SCRIPT, SHUTDOWN, SHOW"; SQL statement:
+saifee_acre [42001-198]
